@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.1
+branches:
+    only:
+    - master
+install: gem install jekyll
+script: jekyll build
+after_success:
+- .travis/push.sh
+sudo: false
+env:
+  global:
+    secure: ZYcDRmIR8Dm/L3VkhzEilAV/n/KG+uggIRqd/dDHkKpKxj9tH+nWTENHsmUtGgv/dGdV1uYwX6s7F7zDMYjMxo99S1pgr3IZ/aArjgtK/eoUbF4LxsOU0dF49407q1Wt4frBKl3n0HGpDJXgGuqy3XEntWI7crqTqhC4Bns5yJ14Wwf2EJFV2tcmEbiofeI9bCpgl0g9/YPswKG+i3BUlCYPfTWbGAneYKmyWajRnHiEw4AglJFheqXQCUmH+WBsVNbJBMEIniT6N62GNHZOLtaujlNYxai89VxOFtRz1QT7T9j5utpuRlOXL1fE/tOy9NqypFunsLL7smfAxT0mGE5hHrFpJ/ACPvYWjac/mYH7TgeAZIuw/+seHPBjJItxvQoj2vq47KwWV91URsZ2RUx8EfSCfkh/1iC86BNxoiPYONRrLi0tJVCzx1E+jqVI1ERLT9i6G/BEyvtRkSh5J4+8oi5FMKjSXm/JtJNihO18NuVO/9T/DBZ/wmQbgjANpxD+M4bocPwKaqr/x3YbTwHrb/KTg8tbf40IZ1z3wOKofaUPMl8hwvSskhyPS6wuF75hxT0DUDurDocVq/7XkusyICnZwMVm8hf7Ml7KBXwfuF7ztrpT01e1WPXEYSikKutgGo11uBqID74Kiflwoe/GFS3pgkfJW1umZgAQdjQ=
